@@ -1,5 +1,7 @@
 package net.distinctsoul.soulsorcery;
 
+import net.distinctsoul.soulsorcery.block.ModBlocks;
+import net.distinctsoul.soulsorcery.item.ModCreativeModeTabs;
 import net.distinctsoul.soulsorcery.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -36,7 +38,10 @@ public class SoulSorcery {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -53,6 +58,14 @@ public class SoulSorcery {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.FALIUM_FRAGMENTS);
             event.accept(ModItems.FALIUM);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.FALIUM_BLOCK);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.DEEPSLATE_FALIUM_ORE);
         }
     }
 

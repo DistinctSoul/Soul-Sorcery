@@ -1,4 +1,9 @@
 {
+  "creativetab.soulsorcery.soul_sorcery": "Soul Sorcery",
+
   "item.soulsorcery.falium_fragments": "Falium Fragments",
-  "item.soulsorcery.falium": "Falium"
+  "item.soulsorcery.falium": "Falium",
+
+  "block.soulsorcery.falium_block": "Falium Block",
+  "block.soulsorcery.deepslate_falium_ore": "Deepslate Falium Ore"
 }
