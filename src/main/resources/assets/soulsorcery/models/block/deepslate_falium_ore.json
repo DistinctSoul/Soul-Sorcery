@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "soulsorcery:block/deepslate_falium_ore"
-  }
-}
