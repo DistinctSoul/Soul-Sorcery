@@ -1,0 +1,7 @@
+// 1.21.1	2025-10-27T19:47:58.5919317	Block States: soulsorcery
+c7fd57c8ef2eedbfbee41676ecf45253250fbfc2 assets/soulsorcery/blockstates/deepslate_falium_ore.json
+b366a5df7cda2e12e48a7063f82d200b574e37f1 assets/soulsorcery/blockstates/falium_block.json
+b26076e26a5e64cd6b0b6fefc5637eb429e9db17 assets/soulsorcery/models/block/deepslate_falium_ore.json
+c0137e39b90b7f731890492803987127142e39f1 assets/soulsorcery/models/block/falium_block.json
+d449548494c6c90fada17ceeded5ee84b2c8df2c assets/soulsorcery/models/item/deepslate_falium_ore.json
+d7c02a887f0cd3354aa0d161d7e126cc8dd7d433 assets/soulsorcery/models/item/falium_block.json
