@@ -6,6 +6,11 @@
   "item.soulsorcery.corrupted_soul": "Corrupted Soul",
   "item.soulsorcery.mighty_purified_soul": "Mighty Purified Soul",
 
+  "item.soulsorcery.soul_stealer": "Soul Stealer",
+
   "block.soulsorcery.falium_block": "Falium Block",
-  "block.soulsorcery.deepslate_falium_ore": "Deepslate Falium Ore"
+  "block.soulsorcery.deepslate_falium_ore": "Deepslate Falium Ore",
+
+  "item.soulsorcery.consumed_soul": "Your body feels like it's transforming into something stronger!",
+  "item.soulsorcery.already_used_soul": "You have already consumed this type of soul!"
 }

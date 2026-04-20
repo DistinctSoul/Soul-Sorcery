@@ -1,9 +1,11 @@
 package net.distinctsoul.soulsorcery.datagen;
 
 import net.distinctsoul.soulsorcery.SoulSorcery;
+import net.distinctsoul.soulsorcery.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -17,6 +19,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-
+        tag(ItemTags.SWORDS)
+                .add(ModItems.SOUL_STEALER.get());
     }
 }

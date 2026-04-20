@@ -1,3 +1,5 @@
-// 1.21.1	2025-10-27T19:47:58.5889067	Tags for minecraft:block mod id soulsorcery
+// 1.21.1	2026-04-07T19:43:52.4713341	Tags for minecraft:block mod id soulsorcery
 3baccb4506ab382d11a543e523448f03f9b40c13 data/minecraft/tags/block/mineable/pickaxe.json
 3baccb4506ab382d11a543e523448f03f9b40c13 data/minecraft/tags/block/needs_iron_tool.json
+b8c1c2d29d00ab03b2612d0aff37a4d6506aaedf data/soulsorcery/tags/block/incorrect_for_falium_tool.json
+32b13946c4cd1f944b029659ccce5fcb2adad4ff data/soulsorcery/tags/block/needs_falium_tool.json

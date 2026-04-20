@@ -22,8 +22,12 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.FALIUM_FRAGMENTS);
                         output.accept(ModItems.FALIUM);
+                        output.accept(ModItems.MIGHTY_PURIFIED_SOUL);
+
                         output.accept(ModBlocks.DEEPSLATE_FALIUM_ORE);
                         output.accept(ModBlocks.FALIUM_BLOCK);
+
+                        output.accept(ModItems.SOUL_STEALER);
 
                     }).build());
 

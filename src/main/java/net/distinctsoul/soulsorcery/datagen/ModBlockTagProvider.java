@@ -2,6 +2,7 @@ package net.distinctsoul.soulsorcery.datagen;
 
 import net.distinctsoul.soulsorcery.SoulSorcery;
 import net.distinctsoul.soulsorcery.block.ModBlocks;
+import net.distinctsoul.soulsorcery.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -25,5 +26,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.FALIUM_BLOCK.get())
                 .add(ModBlocks.DEEPSLATE_FALIUM_ORE.get());
+
+        tag(ModTags.Blocks.NEEDS_FALIUM_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_FALIUM_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .remove(ModTags.Blocks.NEEDS_FALIUM_TOOL);
     }
 }

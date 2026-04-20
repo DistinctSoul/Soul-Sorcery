@@ -1,11 +1,11 @@
 package net.distinctsoul.soulsorcery;
 
 import net.distinctsoul.soulsorcery.block.ModBlocks;
+import net.distinctsoul.soulsorcery.attachment.ModAttachments;
+import net.distinctsoul.soulsorcery.event.ModEvents;
 import net.distinctsoul.soulsorcery.item.ModCreativeModeTabs;
 import net.distinctsoul.soulsorcery.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.neoforged.neoforge.capabilities.EntityCapability;
-import net.neoforged.neoforge.network.registration.NetworkRegistry;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -27,10 +27,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 @Mod(SoulSorcery.MOD_ID)
 public class SoulSorcery {
     public static final String MOD_ID = "soulsorcery";
-    public static final String PROTOCOL_VERSION = "1";
     public static final Logger LOGGER = LogUtils.getLogger();
-
-
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
@@ -48,12 +45,16 @@ public class SoulSorcery {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModAttachments.ATTACHMENTS.register(modEventBus);
+        NeoForge.EVENT_BUS.register(ModEvents.class);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
+
 
     private void commonSetup(FMLCommonSetupEvent event) {
     }
