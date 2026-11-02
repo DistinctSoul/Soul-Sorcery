@@ -2,10 +2,14 @@ package net.distinctsoul.soulsorcery;
 
 import net.distinctsoul.soulsorcery.block.ModBlocks;
 import net.distinctsoul.soulsorcery.attachment.ModAttachments;
-import net.distinctsoul.soulsorcery.event.ModEvents;
+import net.distinctsoul.soulsorcery.component.ModDataComponents;
+import net.distinctsoul.soulsorcery.event.MightySoulEventHandler;
+import net.distinctsoul.soulsorcery.event.SoulSwordEventHandler;
 import net.distinctsoul.soulsorcery.item.ModCreativeModeTabs;
 import net.distinctsoul.soulsorcery.item.ModItems;
+import net.distinctsoul.soulsorcery.item.SoulBarDecorator;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.client.event.RegisterItemDecorationsEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -45,8 +49,10 @@ public class SoulSorcery {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModDataComponents.register(modEventBus);
         ModAttachments.ATTACHMENTS.register(modEventBus);
-        NeoForge.EVENT_BUS.register(ModEvents.class);
+        NeoForge.EVENT_BUS.register(MightySoulEventHandler.class);
+        NeoForge.EVENT_BUS.register(SoulSwordEventHandler.class);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -84,7 +90,8 @@ public class SoulSorcery {
     @EventBusSubscriber(modid = SoulSorcery.MOD_ID, value = Dist.CLIENT)
     static class ClientModEvents {
         @SubscribeEvent
-        static void onClientSetup(FMLClientSetupEvent event) {
+        public static void registerDecorators(RegisterItemDecorationsEvent event) {
+            event.register(ModItems.SOUL_STEALER.get(), SoulBarDecorator.INSTANCE);
         }
     }
 }

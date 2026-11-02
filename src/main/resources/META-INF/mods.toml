@@ -1,0 +1,23 @@
+modLoader    = "javafml"
+loaderVersion = "[21,)"
+license      = "MIT"
+
+[[mods]]
+modId       = "soulsorcery"
+version     = "0.0.3"
+displayName = "Soul Sorcery"
+description = "A mod about obtaining and manipulating souls, and using them for different means."
+
+[[dependencies.soulsorcery]]
+modId        = "neoforge"
+type         = "required"
+versionRange = "[21.1.213,)"
+ordering     = "NONE"
+side         = "BOTH"
+
+[[dependencies.soulsorcery]]
+modId        = "minecraft"
+type         = "required"
+versionRange = "[1.21,1.21.2)"
+ordering     = "NONE"
+side         = "BOTH"

@@ -10,7 +10,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 
 import javax.annotation.Nullable;
 
-public class ModEvents {
+public class MightySoulEventHandler {
 
     // Helper to determine the primary tool class for a block
     @Nullable
