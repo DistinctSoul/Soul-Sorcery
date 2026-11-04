@@ -1,0 +1,4 @@
+// 1.21.1	2026-11-04T18:52:02.7304816	Registries
+c6829f217d9cd9ba4d1ced96d596439ed864206d data/soulsorcery/neoforge/biome_modifier/add_falium_ore.json
+1a7039acad49fe1e202aa025932da4fa5c729d13 data/soulsorcery/worldgen/configured_feature/falium_ore.json
+da21ca17a4063820b4844d69a78b339b80a60a38 data/soulsorcery/worldgen/placed_feature/ore_falium_placed.json
